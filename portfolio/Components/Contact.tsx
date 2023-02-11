@@ -14,7 +14,7 @@ const Contact = (props: Props) => {
         <div className="flex flex-col space-y-5 justify-center items-center mt-24">
             <h4 className='text-2xl font-semibold text-center' >
                 <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Antsoy aho dia ho valiako ianareo.
                 </span>
             </h4>
             <div className="space-y-4">
@@ -23,12 +23,12 @@ const Contact = (props: Props) => {
                     <p>+261344383115</p>
                 </div>
                 <div className="flex items-start space-x-5">
-                    <p>logo phone</p>
-                    <p>+261344383115</p>
+                    <p>Email logo</p>
+                    <p>fanomezantsoanomenandrianiaina@gmail.com</p>
                 </div>
                 <div className="flex items-start space-x-5">
-                    <p>logo phone</p>
-                    <p>+261344383115</p>
+                    <p>facebook logo</p>
+                    <p>https://facebook/NomenaAndrianiaina.com</p>
                 </div>
             </div>
             <form className='flex flex-col space-y-2 w-fit mx-auto'  >

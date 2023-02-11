@@ -6,8 +6,27 @@ import Link from 'next/link'
 type Props = {}
 
 function Header({}: Props) {
+  const HandleClickMenu = () =>{
+    const premier = document.querySelector('#premier')
+    const deuxieme = document.querySelector('#deuxieme')
+    const troisieme = document.querySelector('#troisieme')
+    if(premier?.classList.contains('premier')){
+        premier?.classList.remove('premier')
+    }else{
+        premier?.classList.add('premier')
+    }
+    if(deuxieme?.classList.contains('deuxieme')){
+        deuxieme?.classList.remove('deuxieme')
+    }else{
+        deuxieme?.classList.add('deuxieme')
+    }if(troisieme?.classList.contains('troisieme')){
+        troisieme?.classList.remove('troisieme')
+    }else{
+        troisieme?.classList.add('troisieme')
+    }
+  }
   return ( 
-     <header className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
+     <header className='sticky top-0 p-5 flex items-center justify-between max-w-7xl mx-auto z-20 xl:items-center'>
             <motion.div 
             initial={
                 {
@@ -85,6 +104,30 @@ function Header({}: Props) {
                         <a href='#contact' className='text-base link mr-3 uppercase  md:hover:text-[#1fa1b8] '>
                             Contact
                         </a>
+            </motion.div>
+            <motion.div
+            initial={
+                {
+                    y: -500,
+                    opacity:0,
+                    scale:0.5
+                }
+            }
+            animate={{
+                y:0,
+                opacity:1,
+                scale:1
+            }}
+            transition={{
+                duration: 1.5
+            }}
+            className="xl:hidden md:hidden cursor-pointer "
+            >
+                <div className="menuBurger" onClick={HandleClickMenu} >
+                    <div className="menuChild" id='premier'></div>
+                    <div className="menuChild" id='deuxieme'></div>
+                    <div className="menuChild" id='troisieme'></div>
+                </div>
             </motion.div>
             <motion.div 
             initial={

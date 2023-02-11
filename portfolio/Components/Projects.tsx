@@ -4,7 +4,25 @@ import { motion } from 'framer-motion'
 type Props = {}
 
 const Projects = (props: Props) => {
-  const project = [1,2,3,4]
+  const project = [
+    {
+      image: 'etakalo.png',
+      name: 'E-takalo',
+      techno: ['mongodb.svg','expressjs.svg','physics.png', 'nodejs.svg']
+    }
+    ,{
+      image: 'portfolio.png',
+      name:'My Portfolio',
+      techno: ['nextjs.svg','tailwind.svg']
+    },{
+      image:'mobile.png',
+      name:'Etakalo Mobile',
+      techno: ['flutter.svg','mysql.svg']
+    },{
+      image: 'thirteen.svg',
+      name:'Agent AI',
+      techno:['python.svg','tensorflow.svg']
+    }]
   return (
     <motion.div
     initial={{opacity:0}}
@@ -24,7 +42,7 @@ const Projects = (props: Props) => {
                  flex flex-col  items-center justify-center
                    md:44 h-screen  " key={key}>
                   <motion.img 
-                  className='w-[300px] h-[300px] mt-28 rounded-lg'
+                  className='w-[500px] h-[300px] mt-28 rounded-lg'
                   initial={{
                     y:-300,
                     opacity:0
@@ -40,22 +58,26 @@ const Projects = (props: Props) => {
                     }
                   }
                   viewport={{once:true}}
-                  src="about.jpg" alt="text"
+                  src={pro.image} alt="text"
                   />  
                   <>  
-                  <div className=" p-0  max-w-6xl">
-                    <h4 className='text-2xl font-semibold'> {key + 1}/{project.length} </h4>
+                  <div className=" p-0  max-w-6xl flex-col space-y-4" >
+                    <h4 className='text-2xl font-semibold mt-4'> {pro.name} {key + 1}/{project.length} </h4>
                     <span className='text-sm text-center md:text-left'>
                       Lorem ipsum dolor sit amet consectetur, 
                       adipisicing elit. Quidem similique quod consequatur ducimus?
                        Debitis aut sed dolore veniam placeat ut 
-                      cupiditate soluta rerum, accusantium fuga qui,
-                      cum cumque iure unde.
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                      Molestias assumenda hic aperiam possimus nobis dolorum, accusantium totam quas dolor 
-                      porro esse in sapiente, repudiandae
-                      autem quae distinctio, beatae laudantium accusamus!
                     </span>
+                    <div className="flex justify-center items-center space-x-4">
+                      <p>Techno utiliser:</p>
+                      <div className="flex justify-center items-center space-x-4">
+                          {
+                            pro.techno?.map((tech,key)=>
+                               <img src={tech} key={key} alt="" className='w-11 h-11 animate-pulse' />
+                              )
+                          }
+                      </div>
+                    </div>
                     <div className='flex justify-center space-x-16 mt-10 items-center '>
                         <button className='border h-12 w-32 border-[#1fa1b8] rounded-full text-[#1fa1b8]' >View Source</button>
                         <button className='border h-12 w-32 border-[#1fa1b8] rounded-full text-[#1fa1b8]' >Demo</button>

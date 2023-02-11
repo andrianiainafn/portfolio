@@ -49,3 +49,28 @@
         flex-direction: row !important;
     }
 }
+
+.skills{
+    margin-top: 5rem !important;
+}
+
+.menuChild{
+    height: 2px;
+    width: 30px;
+    margin: 5px;
+    background-color: gray;
+    transition: all 0.7s;
+}
+.premier{
+    transform: rotate(30deg);
+    transform-origin: 1ch;
+}
+.troisieme{
+    transform: rotate(-30deg);
+    transform-origin: 1ch;
+}
+.deuxieme{
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
