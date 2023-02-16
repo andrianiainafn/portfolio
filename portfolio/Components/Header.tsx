@@ -71,7 +71,6 @@ function Header({}: Props) {
                     />
                 </div>
             </motion.div>
-
             <motion.div 
             initial={
                 {
@@ -88,21 +87,23 @@ function Header({}: Props) {
             transition={{
                 duration: 1.5
             }}
-            className='md:flex hidden justify-between items-center  text-gray-400 tracking-[4px] '>
-                        <a href='#about' className='text-base link mr-3 uppercase  md:hover:text-[#1fa1b8]' >
-                            About
+            className='md:flex hidden 
+            justify-between items-center 
+              tracking-[4px] '>
+                        <a href='#about' className='text-base link mr-3 uppercase  ' >
+                            <span className='text-transparent font-bold bg-clip-text bg-gradient-to-br from-[#d0aa5b] to-[#1fa1b8]'>About</span>
                         </a>
                         <a href="#experiences" className='text-base link mr-3 uppercase md:hover:text-[#1fa1b8] ' >
-                           Experiences
+                            <span className='text-transparent font-bold bg-clip-text bg-gradient-to-br from-[#d0aa5b] to-[#1fa1b8]'>Experience</span>
                         </a>
                         <a href='#skills' className='text-base link mr-3 uppercase  md:hover:text-[#1fa1b8]' >
-                            Skills
+                            <span className='text-transparent font-bold bg-clip-text bg-gradient-to-br from-[#d0aa5b] to-[#1fa1b8]'>Skills</span>
                         </a>
                         <a href='#projects' className='text-base link mr-3 uppercase  md:hover:text-[#1fa1b8]'>
-                            Projects
+                            <span className='text-transparent font-bold bg-clip-text bg-gradient-to-br from-[#d0aa5b] to-[#1fa1b8]'>Projects</span>
                         </a>
                         <a href='#contact' className='text-base link mr-3 uppercase  md:hover:text-[#1fa1b8] '>
-                            Contact
+                            <span className='text-transparent font-bold bg-clip-text bg-gradient-to-br from-[#d0aa5b] to-[#1fa1b8]'>Contact</span>
                         </a>
             </motion.div>
             <motion.div
@@ -151,7 +152,7 @@ function Header({}: Props) {
                     bgColor='gray'
                     />
                 </div>
-                <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get In Touch</p>
+                <p className='uppercase hidden md:inline-flex text-sm text-transparent font-bold bg-clip-text bg-gradient-to-br from-[#1fa1b8] to-[#d0aa5b]'>Get In Touch</p>
             </motion.div>
      </header> 
     )

@@ -23,7 +23,7 @@ const About = (props: Props) => {
     md:flex-row xl:flex-row xl:pt-28 max-w-7xl px-10 justify-evenly mx-auto items-center
     '
     >
-      <h3 className='absolute top-24 uppercase text-gray-500 tracking-[20px] text-2xl' >About</h3>
+      <h3 className='absolute top-24 uppercase text-[#d0aa5b] tracking-[20px] text-2xl' >About</h3>
       <motion.img 
         transition={{
           duration: 1.5

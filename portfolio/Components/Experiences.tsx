@@ -32,7 +32,7 @@ function Experiences({}: Props) {
     className='h-screen md:mt-0 mt-28 relative flex   flex-col  
     md:flex-row max-w-full px-10 justify-evenly 
     mx-auto items-center' >
-        <h3 className='absolute top-24  uppercase tracking-[20px] text-gray-500 text-2xl' >Experiences</h3>
+        <h3 className='absolute top-24  uppercase tracking-[20px] text-[#d0aa5b] text-2xl' >Experiences</h3>
         <div className='w-full flex  space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory
         scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#1fa1b8]'>
             <ExperienceCard ens={meta} />

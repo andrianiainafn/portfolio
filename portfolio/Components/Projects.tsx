@@ -32,7 +32,7 @@ const Projects = (props: Props) => {
     flex-col md:flex-row text-left md:text-center max-w-full
     justify-evenly mx-auto items-center z-0'>
         <h3 className='absolute top-24  uppercase tracking-[20px]
-         text-gray-500 text-2xl'>Projects</h3>
+         text-[#d0aa5b] text-2xl'>Projects</h3>
         <div className="relaive w-full flex overflow-x-scroll
          overflow-y-hidden z-20 snap-x snap-mandatory
           scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#1fa1b8]">

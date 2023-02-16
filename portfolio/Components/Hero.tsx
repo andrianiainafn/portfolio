@@ -21,12 +21,12 @@ const Hero = (props: Props) => {
         <Image className=' rounded-lg h-[200px] w-[200px]'
         src={pic} alt="Nomena" />
         <div>
-            <h2 className='text-sm uppercase text-[#1fa1b8] pb-2 tracking-[8px]' >#Software Engennering Student</h2>
+            <h2 className='text-sm uppercase font-semibold text-[#1fa1b8] pb-2 tracking-[8px]' >#Software Engennering Student</h2>
             <h1>
                 <span className=' mr-3 text-gray-300  scroll-px-10' >{text}</span>
                 <Cursor cursorColor='#1fa1b8'/>
             </h1>
-        </div>
+        </div>  
     </div>
   )
 }
