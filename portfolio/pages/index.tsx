@@ -68,7 +68,7 @@ export default function Home() {
         observe(spies)
       })
     }
-  },[valueOfScroll,updateSpy,spies])
+  },[valueOfScroll])
   const HandleScroll = ()=>{
     console.log(valueOfScroll)
     setValueOfScroll(ancien=>!ancien)
