@@ -53,7 +53,7 @@ export default function Home() {
       observer.observe(elems[i])
     }
   }
-  const updateSpy=(values)=>{
+  const updateSpy= (values)=>{
     setSpies(values)
   }
 
@@ -68,7 +68,7 @@ export default function Home() {
         observe(spies)
       })
     }
-  },[valueOfScroll])
+  },[valueOfScroll,updateSpy,observe])
   const HandleScroll = ()=>{
     console.log(valueOfScroll)
     setValueOfScroll(ancien=>!ancien)
