@@ -9,7 +9,8 @@ import Head from 'next/head'
 import { useEffect,useRef, useState } from 'react'
 
 export default function Home() {
-  let spies: Array<HTMLElement> = []
+  // let spies: Array<HTMLElement> = []
+  const [spies,setSpies] = useSatate<Array<HTMLElement>>([])
   const ref = useRef(null)
   const [valueOfScroll, setValueOfScroll] = useState(true)
   const ratio = .6
@@ -55,7 +56,7 @@ export default function Home() {
 
   useEffect(()=>{
     if(ref.current){
-      spies = Array.from(ref.current!.querySelectorAll('[data-spy]'))
+      setSpies(Array.from(ref.current!.querySelectorAll('[data-spy]')))
     }
     if(spies.length > 0){
       observe(spies)
