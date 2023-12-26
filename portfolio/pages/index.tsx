@@ -53,10 +53,14 @@ export default function Home() {
       observer.observe(elems[i])
     }
   }
+  const updateSpy=(values)=>{
+    setSpies(values)
+  }
 
   useEffect(()=>{
     if(ref.current){
-      setSpies(Array.from(ref.current!.querySelectorAll('[data-spy]')))
+      let spy = Array.from(ref.current!.querySelectorAll('[data-spy]'))
+      updateSpy(spy)
     }
     if(spies.length > 0){
       observe(spies)
